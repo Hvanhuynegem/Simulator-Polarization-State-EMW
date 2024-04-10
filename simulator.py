@@ -79,6 +79,8 @@ def polarization_power(p_t, p_r):
 def update_plot_freespace(event):
     phi_deg = phi_slider.get()
     tau_deg = tau_slider.get()
+    phi_deg = round(phi_deg, 2)
+    tau_deg = round(tau_deg, 2)
     phi = np.deg2rad(phi_deg)
     tau = np.deg2rad(tau_deg)
     
@@ -96,7 +98,6 @@ def update_plot_freespace(event):
     ax.set_rlabel_position(0)
     ax.set_title(f'Polarization Ellipse\nRotation angle phi = {phi_deg}°\nEllipticity angle tau = {tau_deg}°')
     ax.set_aspect('equal', 'box')
-    ax.legend()
     ax.grid(True)
     fig.tight_layout()
     canvas.draw()
@@ -105,6 +106,8 @@ def update_plot_freespace(event):
 def update_plot_metallic(event):
     phi_deg = phi_slider.get()
     tau_deg = tau_slider.get()
+    phi_deg = round(phi_deg, 2)
+    tau_deg = round(tau_deg, 2)
     phi = np.deg2rad(phi_deg)
     tau = np.deg2rad(tau_deg)
     height = h[0]
@@ -123,7 +126,6 @@ def update_plot_metallic(event):
     ax.set_rlabel_position(0)
     ax.set_title(f'Polarization Ellipse with height = {h[0]} \nRotation angle phi = {phi_deg}°\nEllipticity angle tau = {tau_deg}°')
     ax.set_aspect('equal', 'box')
-    ax.legend()
     ax.grid(True)
     fig.tight_layout()
     canvas.draw()
@@ -132,6 +134,8 @@ def update_plot_metallic(event):
 def update_plot_dielectric(event):
     phi_deg = phi_slider.get()
     tau_deg = tau_slider.get()
+    phi_deg = round(phi_deg, 2)
+    tau_deg = round(tau_deg, 2)
     phi = np.deg2rad(phi_deg)
     tau = np.deg2rad(tau_deg)
     height = h[0]
@@ -151,7 +155,6 @@ def update_plot_dielectric(event):
     ax.set_rlabel_position(0)
     ax.set_title(f'Polarization Ellipse with height = {h[0]} \nRotation angle phi = {phi_deg}°\nEllipticity angle tau = {tau_deg}°')
     ax.set_aspect('equal', 'box')
-    ax.legend()
     ax.grid(True)
     fig.tight_layout()
     canvas.draw()
@@ -160,6 +163,8 @@ def update_plot_dielectric(event):
 def update_plot_brewster(event):
     phi_deg = phi_slider.get()
     tau_deg = tau_slider.get()
+    phi_deg = round(phi_deg, 2)
+    tau_deg = round(tau_deg, 2)
     phi = np.deg2rad(phi_deg)
     tau = np.deg2rad(tau_deg)
     height = h[0]
@@ -178,7 +183,6 @@ def update_plot_brewster(event):
     ax.set_rlabel_position(0)
     ax.set_title(f'Polarization Ellipse\nRotation angle phi = {phi_deg}°\nEllipticity angle tau = {tau_deg}°')
     ax.set_aspect('equal', 'box')
-    ax.legend()
     ax.grid(True)
     fig.tight_layout()
     canvas.draw()
