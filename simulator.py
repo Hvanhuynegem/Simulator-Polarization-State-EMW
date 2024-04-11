@@ -36,7 +36,7 @@ def polarization_ratio_antenna_metallic(f, e_d, d, h, phi, tau):
     R_L = 2 * np.sqrt(h**2 + (0.25 * d**2))
     k = omega / c
     dR = d - R_L
-    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 - horizontal * np.exp(-1j * k * dR))
+    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 + horizontal * np.exp(-1j * k * dR))
     return p_r
 
 def polarization_ratio_antenna_dielectric(f, e_d, d, h, phi, tau):
@@ -48,7 +48,7 @@ def polarization_ratio_antenna_dielectric(f, e_d, d, h, phi, tau):
     R_L = 2 * np.sqrt(h**2 + (0.25 * d**2))
     k = omega / c
     dR = d - R_L
-    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 - horizontal * np.exp(-1j * k * dR))
+    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 + horizontal * np.exp(-1j * k * dR))
     return p_r
 
 def length_between_antennas(h, angle):
@@ -66,7 +66,7 @@ def polarization_ratio_antenna_brewster(f, e_d, d, h, phi, tau):
     R_L = 2 * np.sqrt(h**2 + (0.25 * d**2))
     k = omega / c
     dR = d - R_L
-    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 - horizontal * np.exp(-1j * k * dR))
+    p_r = p * (1 + vertical * np.exp(-1j * k * dR)) / (1 + horizontal * np.exp(-1j * k * dR))
 
     return p_r
 
